@@ -9,8 +9,10 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'plugin:jest/recommended',
   ],
   env: {
     node: true,
+    jest: true,
   },
 }
