@@ -11,6 +11,15 @@
     "format": "prettier --write --loglevel silent './**/*.{json,js}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.ts": "yarn lint:fix",
+    "./**/*.{js,json}": "yarn format"
+  },
   "keywords": [],
   "author": "robles-ra",
   "license": "MIT",
@@ -19,6 +28,8 @@
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@typescript-eslint/parser": "^3.10.1",
     "eslint": "^7.7.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
     "nodemon": "^2.0.4",
     "typescript": "^4.0.2"
   },
